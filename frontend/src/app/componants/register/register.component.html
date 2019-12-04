@@ -1,0 +1,51 @@
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+      <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+        <div class="row w-100">
+          <div class="col-lg-4 mx-auto">
+
+<div class="auto-form-wrapper">
+    <div class="form-head">
+        <h3>Register </h3>
+    </div>
+    <form (submit)="onRegister()" class="example-container form">
+      <div class="form-group">
+          <mat-form-field  [style.width]="'100%'">
+              <input matInput placeholder="Firstname" [(ngModel)]="firstname" name="firstname">
+            </mat-form-field>
+      </div>
+      <div class="form-group">
+          <mat-form-field  [style.width]="'100%'">
+              <input matInput placeholder="Lastname" [(ngModel)]="lastname" name="lastname">
+            </mat-form-field>
+      </div>
+      <div class="form-group">
+          <mat-form-field  [style.width]="'100%'">
+              <input matInput placeholder="Email" [(ngModel)]="email" name="email">
+            </mat-form-field>
+      </div>
+      <div class="form-group">
+          <mat-form-field  [style.width]="'100%'"  [style.width]="'100%'">
+              <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" [(ngModel)]="password"
+                name="password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+      </div>
+      
+      <div class="form-group">
+          <button mat-raised-button type="submit" >Log in</button>
+      </div>
+     
+    </form>
+
+    <div><h4>{{msg}} </h4></div>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
